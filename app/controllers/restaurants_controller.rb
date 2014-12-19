@@ -20,6 +20,12 @@ class RestaurantsController<ApplicationController
     @restaurant = Restaurant.find(params[:id])
   end
 
+  def destroy
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.destroy
+    redirect_to restaurants_path
+  end
+
 
   private
 
