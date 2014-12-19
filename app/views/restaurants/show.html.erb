@@ -1,0 +1,16 @@
+<h1><%= @restaurant.name %></h1>
+<h2><%= @restaurant.category %></h2>
+
+  <ul>
+    <li>Address: <%= @restaurant.address %></li>
+    <li>City: <%= @restaurant.city %></li>
+    <li>State: <%= @restaurant.state %></li>
+    <li>Zip: <%= @restaurant.zip_code %></li>
+  </ul>
+
+  <h4>Description:</h4>
+<p>
+  <%= @restaurant.description %>
+</p>
+
+<%= link_to "Home", restaurants_path %>

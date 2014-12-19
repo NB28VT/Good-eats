@@ -1,4 +1,4 @@
-class RestaurantController<ApplicationController
+class RestaurantsController<ApplicationController
   def index
     @restaurants = Restaurant.all
   end
@@ -10,7 +10,7 @@ class RestaurantController<ApplicationController
   def create
     @restaurant = Restaurant.create(restaurant_params)
     if @restaurant.save
-      redirect_to restaurant_index_path
+      redirect_to restaurants_path
     else
       render 'new'
     end
